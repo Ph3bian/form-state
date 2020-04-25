@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.Input {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  outline: none;
+  display: grid;
+  padding: 0em 2em;
+  justify-content: center;
+  grid-template-columns: 100%;
+  label {
+    font-size: 1em;
+    outline: none;
+  }
+  input {
+
+    height: 2.5em;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+    border: 1px solid $light-grey;
+    font-family: inherit;
+    font-size: 1em;
+    margin-top: 0.5em;
+    &:active,
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+  span {
+    color: $danger;
+  }
+}

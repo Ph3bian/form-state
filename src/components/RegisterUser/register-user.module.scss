@@ -1,0 +1,19 @@
+.Register {
+  padding: 0 3em;
+  &Form {
+    background: white;
+    h3 {
+      text-align: center;
+    }
+    &Body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 1.5em;
+      
+    }
+    &Submit{
+        button {
+        }
+    }
+  }
+}
