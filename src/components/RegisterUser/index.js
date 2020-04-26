@@ -18,25 +18,27 @@ const RegisterUser = () => {
   return (
     <div className={styles.Register}>
       <form className={styles.RegisterForm}>
-        <h3>Register User</h3>
+        <div className={styles.RegisterFormHeader}>
+          <h3>Register User</h3>
+        </div>
         <div className={styles.RegisterFormBody}>
           <Input
             type="text"
-            required
             name="firstName"
             value={user.firstName}
             label="First name"
             onChange={(e) => handleUser(e)}
             error={errors.firstName}
+            required
           />
           <Input
             type="text"
-            required
-            name="last Name"
+            name="lastName"
             value={user.lastName}
             label="Last name"
             onChange={(e) => handleUser(e)}
             error={errors.lastName}
+            required
           />
           <Input
             type="tel"

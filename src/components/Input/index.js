@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './input.module.scss'
 
-export default React.forwardRef(({ label, error, ...rest }, ref) => {
+export default ({ label, error, ...rest }) => {
   return (
     <div className={styles.Input}>
       <label>{label}</label>
-      <input ref={ref} {...rest} />
+      <input {...rest} />
       {error && (
         <div>
           <span className={styles.InputError}> {error}</span>
@@ -13,4 +13,4 @@ export default React.forwardRef(({ label, error, ...rest }, ref) => {
       )}
     </div>
   )
-})
+}

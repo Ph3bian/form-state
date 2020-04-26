@@ -1,19 +1,26 @@
 .Register {
   padding: 0 3em;
+  font-size: 1rem;
   &Form {
     background: white;
-    h3 {
-      text-align: center;
+
+    &Header {
+      padding: 2em 0;
+      h3 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.33em;
+      }
     }
     &Body {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 1em;
       padding: 0 1.5em;
-      
     }
-    &Submit{
-        button {
-        }
+    &Submit {
+      button {
+      }
     }
   }
 }
