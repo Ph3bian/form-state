@@ -1,7 +1,7 @@
 @import '../../styles/breakpoint';
 @import '../../styles/variables';
 .Layout {
-  background:$gradient;
+  background: $gradient;
   display: block;
   height: 100%;
   width: 100%;
@@ -19,21 +19,20 @@
     height: 100vh;
     display: grid;
     align-items: center;
+    @include sm {
+      padding: 0;
+    }
   }
   &Bg {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
     svg {
-      width: 15em;
+      width: 30em;
     }
-    @include md {
-      display: block;
-      text-align: center;
-      margin: auto;
-      width: 100%;
-      svg {
-        width: 30em;
-      }
+    @include sm {
+      display: none;
     }
   }
 }

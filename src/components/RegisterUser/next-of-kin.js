@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styles from './register-user.module.scss'
 import Input from '../Input'
 import Button from '../Button'
 import { isNextOfKin } from './validation'
 
-const UserDetails = ({ step, setStep, user, setUser }) => {
+const NextOfKin = ({ step, setStep, user, setUser }) => {
   const [errors, setErrors] = useState({})
-
   // handle onchange
 
   const handleNextOfKin = ({ target }) => {
@@ -23,6 +23,8 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
     if (Object.keys(errors).length > 0) return
 
     //handle http request
+
+    setStep(step + 1)
   }
 
   return (
@@ -44,14 +46,15 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         error={errors.lastName}
       />
       <Input
-        type="tel"
+        type="email"
         label="Email address"
         name="email"
         value={user.nextOfKin.email}
         onChange={(e) => handleNextOfKin(e)}
+        error={errors.email}
       />
       <div className={styles.submit}>
-        <Button type="button" onClick={() => setStep(step - 1)}>
+        <Button onClick={() => setStep(step - 1)} type="button">
           Back
         </Button>
         <Button type="submit"> Submit</Button>
@@ -59,4 +62,10 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
     </form>
   )
 }
-export default UserDetails
+NextOfKin.propTypes = {
+  step: PropTypes.number,
+  setStep: PropTypes.func,
+  user: PropTypes.object,
+  setUser: PropTypes.func,
+}
+export default NextOfKin

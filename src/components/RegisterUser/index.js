@@ -1,12 +1,14 @@
 import React, { useReducer, useState } from 'react'
-
 import { UserReducer, DefaultUser } from './user-reducer'
 import styles from './register-user.module.scss'
 import UserDetails from './user-details'
-import NextOfKin from './next-of-kin.js'
+import NextOfKin from './next-of-kin'
+import Completed from './completed'
+
 const RegisterUser = () => {
   let [step, setStep] = useState(0)
   const [user, setUser] = useReducer(UserReducer, DefaultUser)
+
   let active = [
     {
       title: 'Enter correct information below',
@@ -29,6 +31,10 @@ const RegisterUser = () => {
           setUser={setUser}
         />
       ),
+    },
+    {
+      title: 'Registration Complete',
+      content: <Completed user={user} />,
     },
   ]
   return (

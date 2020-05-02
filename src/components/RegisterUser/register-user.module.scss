@@ -1,10 +1,15 @@
 @import '../../styles/variables';
+@import '../../styles/breakpoint';
+
 .Register {
   font-size: 1rem;
   padding: 0 3em;
   background: $white;
   border-radius: 5px;
   font-family: Jost;
+  @include sm{
+    padding: 0 1em;
+  }
   h1,
   h3 {
     text-align: center;
@@ -25,6 +30,15 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 1.5em;
+      @include sm{
+        grid-column-gap: 1em;
+      }
+    }
+  }
+  .Completed{
+    text-align: center;
+    svg{
+      height: 3em;
     }
   }
 }

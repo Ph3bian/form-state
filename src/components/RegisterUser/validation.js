@@ -21,18 +21,21 @@ export const isInfo = (values) => {
 }
 
 export const isNextOfKin = (values) => {
+  console.log(values.nextOfKin.email, values.email)
   let errors = {}
-  if (!values.firstName) {
+  if (!values.nextOfKin.firstName) {
     errors.firstName = 'First name is required'
   }
-  if (!values.lastName) {
+  if (!values.nextOfKin.lastName) {
     errors.lastName = 'Last name is required'
   }
-
-  if (!values.email) {
+  if (!values.nextOfKin.email) {
     errors.email = 'Email address is required'
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Email address is invalid'
+  } else if (values.email == values.nextOfKin.email) {
+    errors.email = "User's email can't be same as next of kin"
   }
+
   return errors
 }

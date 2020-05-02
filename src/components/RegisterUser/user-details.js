@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styles from './register-user.module.scss'
 import Input from '../Input'
 import Button from '../Button'
@@ -30,7 +31,6 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         label="First name"
         onChange={(e) => handleUser(e)}
         error={errors.firstName}
-   
       />
       <Input
         type="text"
@@ -39,7 +39,6 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         label="Last name"
         onChange={(e) => handleUser(e)}
         error={errors.lastName}
-      
       />
       <Input
         type="tel"
@@ -48,7 +47,6 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         value={user.phoneNumber}
         onChange={(e) => handleUser(e)}
         error={errors.phoneNumber}
-       
       />
       <Input
         type="email"
@@ -57,10 +55,15 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         value={user.email}
         onChange={(e) => handleUser(e)}
         error={errors.email}
-       
       />
       <Button type="submit"> Continue</Button>
     </form>
   )
+}
+UserDetails.propTypes = {
+  step: PropTypes.number,
+  setStep: PropTypes.func,
+  user: PropTypes.object,
+  setUser: PropTypes.func,
 }
 export default UserDetails
