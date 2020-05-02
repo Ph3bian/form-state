@@ -6,7 +6,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-
+ 
   @include md {
     font-size: 75%;
   }
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Jost;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -45,7 +45,7 @@ body {
   box-sizing: inherit;
   font-style: inherit;
   font-weight: inherit;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Jost;
   color: inherit;
 }
 
