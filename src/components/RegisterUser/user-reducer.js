@@ -1,8 +1,7 @@
 export const DefaultUser = {
   firstName: '',
   lastName: '',
-  bvn: '',
-  dob: '',
+  phoneNumber: '',
   email: '',
   gender: '',
   nextOfKin: {

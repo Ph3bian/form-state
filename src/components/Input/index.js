@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './input.module.scss'
 
-export default ({ label, error, ...rest }) => {
+const Input = ({ label, error, ...rest }) => {
   return (
     <div className={styles.Input}>
       <label>{label}</label>
@@ -14,3 +14,4 @@ export default ({ label, error, ...rest }) => {
     </div>
   )
 }
+export default Input

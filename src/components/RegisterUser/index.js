@@ -33,6 +33,7 @@ const RegisterUser = () => {
   ]
   return (
     <div className={styles.Register}>
+      <h1>Register User</h1>
       <h3>{active[`${step}`].title}</h3>
       <div className={styles.RegisterBody}>{active[`${step}`].content}</div>
     </div>
