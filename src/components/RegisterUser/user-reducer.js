@@ -3,13 +3,10 @@ export const DefaultUser = {
   lastName: '',
   phoneNumber: '',
   email: '',
-  gender: '',
   nextOfKin: {
     firstName: '',
     lastName: '',
     email: '',
-    phoneNumber: '',
-    gender: '',
   },
 }
 

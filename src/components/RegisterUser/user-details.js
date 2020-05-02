@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styles from './register-user.module.scss'
 import Input from '../Input'
 import Button from '../Button'
+import { isInfo } from './validation'
+
 const UserDetails = ({ step, setStep, user, setUser }) => {
   const [errors, setErrors] = useState({})
 
@@ -14,7 +16,9 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
   }
   const handleContinue = (e) => {
     e.preventDefault()
-    console.log(e)
+    const errors = isInfo(user)
+    setErrors(errors)
+    if (Object.keys(errors).length > 0) return
     setStep(step + 1)
   }
   return (
@@ -26,7 +30,7 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         label="First name"
         onChange={(e) => handleUser(e)}
         error={errors.firstName}
-        required
+   
       />
       <Input
         type="text"
@@ -35,7 +39,7 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         label="Last name"
         onChange={(e) => handleUser(e)}
         error={errors.lastName}
-        required
+      
       />
       <Input
         type="tel"
@@ -44,7 +48,7 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         value={user.phoneNumber}
         onChange={(e) => handleUser(e)}
         error={errors.phoneNumber}
-        required
+       
       />
       <Input
         type="email"
@@ -53,7 +57,7 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
         value={user.email}
         onChange={(e) => handleUser(e)}
         error={errors.email}
-        required
+       
       />
       <Button type="submit"> Continue</Button>
     </form>

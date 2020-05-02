@@ -20,7 +20,7 @@ const RegisterUser = () => {
       ),
     },
     {
-      title: 'Enter next of Kin details below',
+      title: 'Enter Next of Kin details below',
       content: (
         <NextOfKin
           setStep={setStep}
