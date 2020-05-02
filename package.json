@@ -2,6 +2,12 @@
   "name": "form-state",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "Form validation",
+    "Form state",
+    "useReducer",
+    "Multi step form"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
