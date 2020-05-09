@@ -6,7 +6,7 @@
     "Form validation",
     "Form state",
     "useReducer",
-    "Multi step form"
+    "Multistep form"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
