@@ -1,5 +1,5 @@
 ## Form State
- A multiStep form with React Hooks
+ A multistep form with React Hooks
  
  Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

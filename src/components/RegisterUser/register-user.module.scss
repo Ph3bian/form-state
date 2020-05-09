@@ -7,37 +7,37 @@
   background: $white;
   border-radius: 5px;
   font-family: Jost;
-  @include sm{
+  @include sm {
     padding: 0 1em;
   }
   h1,
-  h3 {
+  h4 {
     text-align: center;
   }
-
-  h3 {
-    font-weight: 300;
-    font-size: 1.33em;
+  h1 {
+    font-size: 1.5em;
+  }
+  h4 {
     padding-bottom: 1.25em;
-
+    font-size: 1em;
   }
 
   &Form {
     button {
       margin-top: 1em;
     }
-    .submit{
+    .submit {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 1.5em;
-      @include sm{
+      @include sm {
         grid-column-gap: 1em;
       }
     }
   }
-  .Completed{
+  .Completed {
     text-align: center;
-    svg{
+    svg {
       height: 3em;
       width: 3em;
     }
